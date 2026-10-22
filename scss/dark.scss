@@ -1,3 +1,6 @@
+   @use "variables" as *;
+   @use "funciones" as *;
+
 /* Cambio la paleta */
 :root {
   --corcho: #3b2d1f;
@@ -40,19 +43,17 @@ body {
   border-color: var(--tinta);
 }
 
-/* La carpeta del hero mantiene su color de papel, pero más oscuro */
 .carpeta,
 .carpeta-pestana {
-  background-color: #6c6245;
+  background-color: oscurecer($papel-carpeta, 50%);
 }
 
-/* Las tarjetas del tablón: su color de papel del modo claro, más oscuro */
 .card-polaroid {
-  background-color: #615f5a;
+  background-color: oscurecer($papel-polaroid, 60%);
 }
 
 .card-recorte {
-  background-color: #5a5850;
+  background-color: oscurecer($papel-periodico, 60%);
 }
 
 /* El número de caso, un poco más claro para que se lea sobre el papel oscuro */

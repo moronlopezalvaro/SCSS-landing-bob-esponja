@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+// Papel con sombra
+@mixin papel($fondo) {
+  background-color: $fondo;
+  box-shadow: $sombra-papel;
+}
+
+// Marco de madera
+@mixin marco-madera($grosor: 14px) {
+  border: $grosor solid var(--madera);
+}
+
+// Media queries con los cortes de Bootstrap
+@mixin movil {
+  @media (max-width: $movil) {
+    @content;
+  }
+}
+
+@mixin menu-plegado {
+  @media (max-width: $menu-plegado) {
+    @content;
+  }
+}

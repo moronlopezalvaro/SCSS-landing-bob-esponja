@@ -1,0 +1,7 @@
+@use "sass:color";
+
+// Oscurece un color mezclándolo con negro.
+// $porcentaje es cuánto negro se añade.
+@function oscurecer($color, $porcentaje) {
+@return color.mix(black, $color, $porcentaje);
+}

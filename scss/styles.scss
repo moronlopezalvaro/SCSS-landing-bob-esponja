@@ -1,29 +1,32 @@
+@use "variables" as *;
+@use "funciones" as *;
+@use "mixins" as *;
 /* paleta de la guía de estilo) */
 :root {
-  --mar-profundo: #0f2f33;
-  --madera: #5a3e26;
-  --madera-oscura: #3f2a18;
-  --corcho: #b98a55;
-  --papel-folio: #e9d9a6;
-  --papel-carpeta: #d9c58a;
-  --papel-polaroid: #f4efe2;
-  --papel-periodico: #e3dcc8;
-  --tinta: #2a2118;
-  --sello-rojo: #b3261e;
-  --sello-rojo-oscuro: #8f1e18;
-  --oxido: #8e4220;
-  --laton: #c9a13b;
-  --alga: #3f7a45;
-  --papel-hoja: #e9d9a6;
-  --papel-libreta: #fbf6d8;
-  --boli-azul: #1f3c8a;
-  --linea-libreta: #6b8fc7;
+  --mar-profundo: #{$mar-profundo};
+  --madera: #{$madera};
+  --madera-oscura: #{$madera-oscura};
+  --corcho: #{$corcho};
+  --papel-folio: #{$papel-folio};
+  --papel-carpeta: #{$papel-carpeta};
+  --papel-polaroid: #{$papel-polaroid};
+  --papel-periodico: #{$papel-periodico};
+  --tinta: #{$tinta};
+  --sello-rojo: #{$sello-rojo};
+  --sello-rojo-oscuro: #{$sello-rojo-oscuro};
+  --oxido: #{$oxido};
+  --laton: #{$laton};
+  --alga: #{$alga};
+  --papel-hoja: #{$papel-hoja};
+  --papel-libreta: #{$papel-libreta};
+  --boli-azul: #{$boli-azul};
+  --linea-libreta: #{$linea-libreta};
 
-  --fuente-maquina: "Special Elite", "Courier New", monospace;
-  --fuente-rotulador: "Permanent Marker", "Comic Sans MS", cursive;
-  --fuente-mano: "Caveat", cursive;
+  --fuente-maquina: #{$fuente-maquina};
+  --fuente-rotulador: #{$fuente-rotulador};
+  --fuente-mano: #{$fuente-mano};
 
-  --sombra-papel: 0 10px 22px rgba(0, 0, 0, 0.45);
+  --sombra-papel: #{$sombra-papel};
 }
 
 /* Hueco arriba al saltar a un campo o a un #enlace, para que la navbar fija no lo tape */
@@ -163,7 +166,7 @@ a:focus-visible,
 #inicio {
   margin: 40px auto 0;
   max-width: 1280px;
-  border: 14px solid var(--madera);
+  @include marco-madera;
   border-bottom: 0;
 }
 
@@ -172,9 +175,8 @@ a:focus-visible,
   max-width: 820px;
   margin: 30px auto 0;
   padding: 48px 56px 56px;
-  background-color: var(--papel-carpeta);
+  @include papel(var(--papel-carpeta));
   border-radius: 0 14px 6px 6px;
-  box-shadow: var(--sombra-papel);
   transform: rotate(1deg);
 }
 
@@ -221,7 +223,7 @@ a:focus-visible,
 .tablon-misterios {
   margin: 0 auto 40px;
   max-width: 1280px;
-  border: 14px solid var(--madera);
+  @include marco-madera;
   border-top: 0;
   padding-top: 24px;
   padding-bottom: 88px;
@@ -366,8 +368,7 @@ a:focus-visible,
   max-width: 880px;
   margin: 0 auto;
   padding: 56px 64px 48px;
-  background-color: var(--papel-hoja);
-  box-shadow: var(--sombra-papel);
+  @include papel(var(--papel-hoja));
   transform: rotate(-0.5deg);
 }
 
@@ -553,7 +554,7 @@ textarea.campo-libreta {
 .tablon-agencia {
   max-width: 1280px;
   margin: 8px auto 40px;
-  border: 14px solid var(--madera);
+  @include marco-madera;
 }
 
 .rejilla-agentes {
@@ -568,9 +569,8 @@ textarea.campo-libreta {
   padding: 16px 16px 20px;
   border: 0;
   border-radius: 0;
-  background-color: var(--papel-hoja);
+  @include papel(var(--papel-hoja));
   color: var(--tinta);
-  box-shadow: var(--sombra-papel);
 }
 
 .ficha-agente .card-img-top {
@@ -623,9 +623,8 @@ textarea.campo-libreta {
   max-width: 640px;
   margin: 72px auto 0;
   padding: 36px 44px;
-  background-color: var(--papel-hoja);
+  @include papel(var(--papel-hoja));
   color: var(--tinta);
-  box-shadow: var(--sombra-papel);
   transform: rotate(-1deg);
 }
 
@@ -678,7 +677,7 @@ textarea.campo-libreta {
 }
 
 /* Menú desplegado en móvil y tablet */
-@media (max-width: 991.98px) {
+@include menu-plegado {
   .navbar-archivo .pestana {
     margin: 0 0 6px;
     border-bottom: 2px solid var(--madera);
@@ -695,7 +694,7 @@ textarea.campo-libreta {
 }
 
 /* Móvil */
-@media (max-width: 575.98px) {
+@include movil {
 
   #inicio,
   .tablon-misterios {

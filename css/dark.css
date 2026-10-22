@@ -41,19 +41,17 @@ body {
   border-color: var(--tinta);
 }
 
-/* La carpeta del hero mantiene su color de papel, pero más oscuro */
 .carpeta,
 .carpeta-pestana {
-  background-color: #6c6245;
+  background-color: rgb(42.5490196078%, 38.6274509804%, 27.0588235294%);
 }
 
-/* Las tarjetas del tablón: su color de papel del modo claro, más oscuro */
 .card-polaroid {
-  background-color: #615f5a;
+  background-color: rgb(38.2745098039%, 37.4901960784%, 35.4509803922%);
 }
 
 .card-recorte {
-  background-color: #5a5850;
+  background-color: rgb(35.6078431373%, 34.5098039216%, 31.3725490196%);
 }
 
 /* El número de caso, un poco más claro para que se lea sobre el papel oscuro */

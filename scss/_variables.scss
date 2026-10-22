@@ -1,0 +1,29 @@
+ @use "sass:color";
+
+   $mar-profundo: #0f2f33;
+   $madera: #5a3e26;
+   $madera-oscura: #3f2a18;
+   $corcho: #b98a55;
+   $papel-folio: #e9d9a6;
+   $papel-carpeta: #d9c58a;
+   $papel-polaroid: #f4efe2;
+   $papel-periodico: #e3dcc8;
+   $tinta: #2a2118;
+   $sello-rojo: #b3261e;
+   $sello-rojo-oscuro: color.adjust($sello-rojo, $lightness: -8%); // función nativa
+   $oxido: #8e4220;
+   $laton: #c9a13b;
+   $alga: #3f7a45;
+   $papel-hoja: #e9d9a6;
+   $papel-libreta: #fbf6d8;
+   $boli-azul: #1f3c8a;
+   $linea-libreta: #6b8fc7;
+
+   $fuente-maquina: "Special Elite", "Courier New", monospace;
+   $fuente-rotulador: "Permanent Marker", "Comic Sans MS", cursive;
+   $fuente-mano: "Caveat", cursive;
+
+   $sombra-papel: 0 10px 22px rgba(0, 0, 0, 0.45);
+
+   $movil: 575.98px;
+   $menu-plegado: 991.98px;
