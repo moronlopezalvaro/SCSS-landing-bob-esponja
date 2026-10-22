@@ -1,0 +1,101 @@
+/* Cambio la paleta */
+:root {
+  --corcho: #3b2d1f;
+  --papel-folio: #e9d9a6;
+  --papel-carpeta: #2e2a24;
+  --papel-polaroid: #26231f;
+  --papel-periodico: #2b2824;
+  --tinta: #ece3c8;
+  --oxido: #e09a6b;
+  --madera: #24170c;
+  --madera-oscura: #140d06;
+  --papel-hoja: #2e2a24;
+  --papel-libreta: #24221e;
+  --boli-azul: #a9c1ff;
+  --linea-libreta: #4a6290;
+}
+
+/* Fondo y color de fuente de toda la página */
+body {
+  background-color: #050c0e;
+  background-image: none;
+  color: var(--tinta);
+}
+
+/* El corcho se oscurece con una capa negra encima de la textura */
+.tablon {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/corcho.jpg");
+}
+
+/* Los textos que en el modo claro eran oscuros */
+.titulo-seccion,
+.subtitulo-seccion,
+.carpeta,
+.card-polaroid,
+.card-recorte {
+  color: var(--tinta);
+}
+
+.cabecera-periodico {
+  border-color: var(--tinta);
+}
+
+/* La carpeta del hero mantiene su color de papel, pero más oscuro */
+.carpeta,
+.carpeta-pestana {
+  background-color: #6c6245;
+}
+
+/* Las tarjetas del tablón: su color de papel del modo claro, más oscuro */
+.card-polaroid {
+  background-color: #615f5a;
+}
+
+.card-recorte {
+  background-color: #5a5850;
+}
+
+/* El número de caso, un poco más claro para que se lea sobre el papel oscuro */
+.caso {
+  color: #f2b98f;
+}
+
+/* El sello rojo se aclara un poco para que se lea sobre el papel oscuro */
+.sello {
+  border-color: #e0574e;
+  color: #e0574e;
+}
+
+/* Las pestañas */
+.navbar-archivo .pestana {
+  color: var(--tinta);
+}
+
+.navbar-archivo .pestana.active {
+  background-color: var(--papel-folio);
+  color: #2a2118;
+}
+
+.footer-archivo {
+  color: #bfb08a;
+}
+
+.navbar-archivo .pestana.active:hover {
+  color: #2a2118;
+}
+
+/* El texto del botón rojo */
+.btn-sello {
+  --bs-btn-color: #f4efe2;
+  --bs-btn-hover-color: #f4efe2;
+  --bs-btn-active-color: #f4efe2;
+}
+
+/* Expedientes y libreta */
+.acciones a:not(.btn) {
+  color: var(--tinta);
+}
+
+.campo-libreta::placeholder {
+  color: #8f9cbb;
+}
